@@ -10,6 +10,11 @@ window.addEventListener("DOMContentLoaded", () => {
       _content.style.transform = "translateX(0)";
     });
     previousContent.classList.add("none");
+    if (selectedContents.children.length < 3) {
+      nextContent.classList.add("none");
+    } else {
+      nextContent.classList.remove("none");
+    }
   };
 
   const toggler = () => {
@@ -21,12 +26,13 @@ window.addEventListener("DOMContentLoaded", () => {
           _el.classList.remove("active");
         });
         el.classList.add("active");
-        resetState();
+
         const id = el.dataset.listId;
         contents.forEach((content) => {
           if (content.dataset.listId === id) {
             content.classList.remove("none");
             selectedContents = content;
+            resetState();
           } else {
             content.classList.add("none");
           }
@@ -66,4 +72,5 @@ window.addEventListener("DOMContentLoaded", () => {
 
   toggler();
   navigation();
+  resetState();
 });
