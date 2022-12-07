@@ -16,7 +16,7 @@ ul {
   padding: 2rem 0;
   background: #184c98;
   color: white;
-  width: 200px;
+  width: 120px;
 }
 
 .toggler {
@@ -39,7 +39,7 @@ ul {
 .contentsWrapper {
   margin: 2rem 4rem;
   overflow: hidden;
-  width: 50vw;
+  width: 42vw;
   position: relative;
 }
 
@@ -51,7 +51,7 @@ ul {
 }
 
 .contents > li {
-  width: calc(25vw - 20px);
+  width: calc(21vw - 20px);
   padding-right: 20px;
 }
 
