@@ -1,3 +1,141 @@
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-radius: 1rem;
+  background: blanchedalmond;
+  width: fit-content;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.years {
+  padding: 2rem 0;
+  background: #184c98;
+  color: white;
+  width: 200px;
+}
+
+.toggler {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+
+  line-height: 3em;
+}
+
+.toggler.active {
+  background: #3e639c;
+}
+
+.contentsSection {
+  position: relative;
+  background: #f7f7f7;
+}
+
+.contentsWrapper {
+  margin: 2rem 4rem;
+  overflow: hidden;
+  width: 50vw;
+  position: relative;
+}
+
+.contents {
+  width: fit-content;
+  display: flex;
+  padding: 0;
+  transition: transform 0.4s ease-out;
+}
+
+.contents > li {
+  width: calc(25vw - 20px);
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+  .years {
+    display: flex;
+    width: 100%;
+    padding: 0;
+  }
+  .contentsWrapper {
+    width: 90vw;
+    margin: 1rem auto 3rem auto;
+  }
+  .contents > li {
+    width: calc(45vw - 20px);
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .navButton.nextContent {
+    bottom: 0;
+    right: 50%;
+    top: auto;
+    transform: translateX(120%);
+  }
+  .navButton.previousContent {
+    bottom: 0;
+    left: 50%;
+    top: auto;
+    transform: translateX(-120%);
+  }
+}
+
+.contentImage {
+  width: 100%;
+  height: 160px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.contentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentImage p {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 2em;
+  padding: 0 1em;
+  background: white;
+  margin: 0;
+  color: rgb(50, 50, 190);
+}
+
+.navButton {
+  cursor: pointer;
+  position: absolute;
+  color: #184c98;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+  border-radius: 1000px;
+  box-shadow: -3px -1px 7px 3px #ddd;
+  border: none;
+  transform: translateY(-50%);
+}
+.previousContent {
+  left: 1rem;
+  top: 50%;
+}
+
+.nextContent {
+  right: 1rem;
+  top: 50%;
+}
+
 .flex {
   display: flex;
 }
