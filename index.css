@@ -130,11 +130,13 @@ ul {
 .previousContent {
   left: 1rem;
   top: 50%;
+  z-index: 5;
 }
 
 .nextContent {
   right: 1rem;
   top: 50%;
+  z-index: 5;
 }
 
 .flex {
@@ -146,3 +148,5 @@ ul {
 .block {
   display: block;
 }
+
+/* NEW CSS */

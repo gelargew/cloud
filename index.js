@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const contents = document.querySelectorAll(".contents");
   const previousContent = document.querySelector(".previousContent");
   const nextContent = document.querySelector(".nextContent");
+  const featuredContents = document.querySelectorAll(".featuredTitle");
   let selectedContents = null;
   let offset = 0;
   const resetState = () => {
@@ -15,6 +16,17 @@ window.addEventListener("DOMContentLoaded", () => {
     } else {
       nextContent.classList.remove("none");
     }
+  };
+
+  const toggleFeaturedTitle = (id) => {
+    featuredContents.forEach((el) => {
+      if (el.dataset.listId === id) {
+        el.classList.remove("none");
+      } else {
+        el.classList.add("none");
+      }
+      console.log(el.classList);
+    });
   };
 
   const toggler = () => {
@@ -37,6 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
             content.classList.add("none");
           }
         });
+        toggleFeaturedTitle(id);
       });
     });
   };

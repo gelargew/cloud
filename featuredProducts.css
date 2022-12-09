@@ -1,0 +1,86 @@
+.featuredWrapper {
+  width: 66vw;
+  margin: auto;
+}
+.featuredContainer {
+  margin: auto;
+  width: 92vw;
+}
+.featuredYears {
+  width: auto;
+}
+
+.featuredProducts {
+  width: fit-content;
+  padding: 0;
+  transition: transform 0.4s ease-out;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.featuredProducts h4 {
+  color: #2d65ae;
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.featuredProductDetails {
+  flex: 1;
+}
+
+.featuredProducts a {
+  background: #2d65ae;
+  padding: 0.6em 2em;
+  border-radius: 10000px;
+  cursor: pointer;
+  color: white;
+}
+
+.featuredProducts > li {
+  width: calc(22vw - 80px);
+  padding: 0 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.featuredImg {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 120px;
+  margin: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background: #3f96d5;
+}
+
+.featuredImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featuredTitle {
+  color: #2d65ae;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .featuredProducts > li {
+    width: 21vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .featuredProducts > li {
+    width: calc(45vw - 20px);
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .featuredProducts {
+    font-size: 1rem;
+  }
+  .featuredProducts a {
+    padding: 0.6rem 1.2rem;
+  }
+}
