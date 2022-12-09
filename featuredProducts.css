@@ -27,7 +27,7 @@
   top: 0;
   left: 10%;
   border-radius: 16px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .featuredProducts h4 {
@@ -58,6 +58,12 @@
   place-items: center;
   position: relative;
 }
+
+.featuredProducts > li > *:not(.featuredBg) {
+  z-index: 5;
+  position: relative;
+}
+
 .featuredImg {
   width: 100%;
   aspect-ratio: 1;
@@ -97,5 +103,12 @@
   }
   .featuredProducts a {
     padding: 0.6rem 1.2rem;
+  }
+  .featuredWrapper {
+    width: 92vw;
+  }
+  .featuredBg {
+    width: 96%;
+    left: 2%;
   }
 }
